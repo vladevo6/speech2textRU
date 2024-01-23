@@ -1,7 +1,9 @@
 from huggingsound import SpeechRecognitionModel
+from transformers import pipeline
 
-model = SpeechRecognitionModel("jonatasgrosman/wav2vec2-large-xlsr-53-russian")
-audio_paths = ["/path/to/file.mp3", "/path/to/another_file.wav"]
+pipe = pipeline("automatic-speech-recognition", model="jonatasgrosman/wav2vec2-large-xlsr-53-russian")
 
-transcriptions = model.transcribe(audio_paths)
+audio_paths = ["/path/to/file.mp3"]
+
+transcriptions = pipe(audio_paths)
 print(transcriptions)
