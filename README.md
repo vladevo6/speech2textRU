@@ -27,4 +27,4 @@
     
     print(evaluation)
     
-    \# evaluation format: {"wer": 0.08, "cer": 0.02}
+    # evaluation format: {"wer": 0.08, "cer": 0.02}
